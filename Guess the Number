@@ -1,4 +1,4 @@
-
+#you guess the computer's number
 import random
 
 while True:
@@ -14,3 +14,23 @@ if your_numb == comp_numb:
     print('Good Job! The number was {}'.format(your_numb))
 else:
     print('Wrong! The number was {}'.format(comp_numb))
+
+
+
+
+#computer guesses your number
+import random
+import time
+
+print("Ok, you have three seconds to pick a number! ")
+time.sleep(3) 
+
+my_list = ([0,1,2,3,4,5,6,7,8,9,10])
+x = (random.choice(my_list))
+
+while input('Is your number {}  '.format(x)) == 'no':
+    my_list.remove(x)
+    x = (random.choice(my_list))
+    
+if input('Is your number {}  '.format(x)) == 'yes':
+    print('yay')

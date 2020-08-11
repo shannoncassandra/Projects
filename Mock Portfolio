@@ -3,4 +3,4 @@ import os
 os.system('cls')
 a=input("")
 
-
+#First install yfinance in the TERMINAL

@@ -1,0 +1,6 @@
+#VS code cosmetic workaround
+import os
+os.system('cls')
+a=input("")
+
+

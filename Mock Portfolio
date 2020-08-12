@@ -1,6 +1,32 @@
+
 #VS code cosmetic workaround
 import os
 os.system('cls')
 a=input("")
 
-#First install yfinance in the TERMINAL
+#reset Python
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+
+'''
+yfinance is not the same library as yahoo-finance
+
+Yahoo-finance seems to be outdated and maybe that's why it's not working 
+
+
+YFinance is a shortcut library to skim Yahoo web data and not Yahoo API
+You still can use it but you can do way more with Pandas and Requests but it 
+will take time for you to learn how to look up tags in webcode. 
+
+Working example 
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+import yfinance as yf
+stockname="IBM" 
+
+stock = yf.Ticker(stockname)
+
+print(stock.splits)
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+

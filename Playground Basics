@@ -1,0 +1,35 @@
+# turn on the little red LED light
+from adafruit_circuitplayground.express import cpx
+while True:
+    cpx.red_led = True
+    
+# Blinky
+import time
+from adafruit_circuitplayground.express import cpx
+while True:
+    cpx.red_led = True
+    time.sleep(0.5)
+    cpx.red_led = False
+    time.sleep(0.5)
+    
+# switch
+from adafruit_circuitplayground.express import cpx
+while True:
+    if cpx.switch:
+        cpx.red_led = True
+    else:
+        cpx.red_led = False
+# OR (shorter)
+while True:
+    cpx.red_led = cpx.switch
+    
+# shaking
+from adafruit_circuitplayground.express import cpx
+while True:
+    if cpx.shake(shake_threshold=20):
+        print("Shake detected!")
+        cpx.red_led = False
+    else:
+        cpx.red_led = True
+        
+ 

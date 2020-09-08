@@ -12,7 +12,7 @@ while True:
     cpx.red_led = False
     time.sleep(0.5)
     
-# switch
+# lil manual switch
 from adafruit_circuitplayground.express import cpx
 while True:
     if cpx.switch:
@@ -32,4 +32,18 @@ while True:
     else:
         cpx.red_led = True
         
+# Tones
+# cpx.play_tone(275, 1) C
+# cpx.play_tone(294, 1) D
+# cpx.play_tone(330, 1) E
+# cpx.play_tone(349, 1) F
+# cpx.play_tone(440, 1) G
+# cpx.play_tone(494, 1) A
+# cpx.play_tone(523, 1) B
+
+# Mary had a little lamb
+  
+  
+  
+  
  

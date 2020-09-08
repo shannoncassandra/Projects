@@ -41,7 +41,36 @@ while True:
 # cpx.play_tone(494, 1) A
 # cpx.play_tone(523, 1) B
 
-# Mary had a little lamb
+# Tap
+from adafruit_circuitplayground.express import cpx
+
+import time
+
+cpx.pixels.brightness = .01
+
+# Set to check for single-taps.
+cpx.detect_taps = 1
+tap_count = 0
+
+# We're looking for 2 single-taps before moving on.
+while tap_count < 2:
+    if cpx.tapped:
+        cpx.pixels[0] = (255, 255, 255)
+	tap_count +=1
+
+# Now switch to checking for double-taps.
+tap_count = 0
+cpx.detect_taps = 2
+
+# We're looking for 2 double-taps before moving on.
+while tap_count < 2:
+    if cpx.tapped:
+	cpx.pixels[1] = (255, 0, 255)
+	tap_count +=1
+
+while tap_count < 3:
+    if cpx.tapped:
+	cpx.pixels[2] = (255, 0, 0)
   
   
   

@@ -1,0 +1,41 @@
+#real estate investment analyzer for Salt Lake county
+
+import os
+os.system('cls')
+
+price = 250000
+squarefoot = 3000
+acre = .25
+upd = "yes"
+zipcode = 84094
+garage = 2
+
+#updated = yes
+
+#price
+if int(price) / int(squarefoot) > 150:
+    a = 0
+if int(price) / int(squarefoot) < 115:
+    a = 20
+else:
+    a = 10
+
+#acre
+b = float(acre)*80
+
+#updated
+if upd == "yes":
+    c = 20
+else:
+    c = 0
+
+if zipcode == 84103 or zipcode == 84117 or zipcode == 84093 or zipcode == 84108 or zipcode == 84109 or zipcode == 84106 or zipcode == 84105 or zipcode == 84094 or zipcode == 84121 or zipcode == 84124:
+    d = 20
+if zipcode == 84107 or zipcode == 84047 or zipcode == 84070 or zipcode == 84088 or zipcode == 84095 or zipcode == 84081:
+    d = 10
+if zipcode == 84116 or zipcode == 84104 or zipcode == 84128 or zipcode == 84120 or zipcode == 84119 or zipcode == 84123 or zipcode == 84118 or zipcode == 84044 or zipcode == 84006:
+    d = 0
+
+e = int(garage)*10
+
+print(a+b+c+d+e)
